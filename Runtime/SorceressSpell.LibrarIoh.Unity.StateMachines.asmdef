@@ -1,0 +1,16 @@
+{
+    "name": "SorceressSpell.LibrarIoh.Unity.StateMachines",
+    "rootNamespace": "SorceressSpell.LibrarIoh.Unity.StateMachines",
+    "references": [
+        "SorceressSpell.LibrarIoh.StateMachines"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

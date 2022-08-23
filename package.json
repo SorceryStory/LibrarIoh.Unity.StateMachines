@@ -1,0 +1,21 @@
+{
+  "name": "com.sorceressspell.librarioh.unity.statemachines",
+  "displayName": "LibrarIoh.Unity.StateMachines",
+  "version": "0.1.0",
+  "type": "library",
+  "unity": "2018.1",
+  "description": "LibrarIoh.Unity.StateMachines (https://github.com/SorceressSpell/LibrarIoh.Unity.StateMachines)\n\nState Machines for Unity.\n\nDepends on:\n  - LibrarIoh.StateMachines (https://github.com/SorceressSpell/LibrarIoh.StateMachines)",
+  "dependencies": {
+    "com.sorceressspell.librarioh.statemachines": "0.2.0"
+  },
+  "author": {
+    "name": "Sorceress' Spell",
+    "email": "Sorceress.Spell@gmail.com",
+    "url": "http://SorceressSpell.com"
+  },
+  "keywords": [
+    "librarioh",
+    "unity",
+    "statemachines"
+  ]
+}
