@@ -1,7 +1,7 @@
-# [LibrarIoh.Unity.StateMachines](https://github.com/SorceressSpell/LibrarIoh.Unity.StateMachines)
+# [LibrarIoh.Unity.StateMachines](https://github.com/SorceryStory/LibrarIoh.Unity.StateMachines)
 
 State Machines for Unity.
 
 ## Dependencies
 
-- [LibrarIoh.StateMachines](https://github.com/SorceressSpell/LibrarIoh.StateMachines)
+- [LibrarIoh.StateMachines](https://github.com/SorceryStory/LibrarIoh.StateMachines)
