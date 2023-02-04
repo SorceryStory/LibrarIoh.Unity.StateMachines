@@ -5,18 +5,11 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
     public class FiniteGameStateMachine<TGameState> : FiniteStateMachine<TGameState>, IGameStateMachine<TGameState>
         where TGameState : GameState<TGameState>
     {
-        #region Properties
-
-        protected TGameState ChangeToState { set; get; }
-
-        #endregion Properties
-
         #region Constructors
 
         public FiniteGameStateMachine()
             : base()
         {
-            ChangeToState = null;
         }
 
         #endregion Constructors
@@ -38,19 +31,12 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             FiniteGameStateMachine_OnUpdate(deltaTime);
         }
 
-        protected virtual void FiniteGameStateMachine_ChangeStateStrategy(TGameState state)
-        {
-            ChangeToState = state;
-        }
-
         protected virtual void FiniteGameStateMachine_OnChangeStateFailure(TGameState state)
         {
-            ChangeToState = null;
         }
 
         protected virtual void FiniteGameStateMachine_OnChangeStateSuccess(TGameState state)
         {
-            ChangeToState = null;
         }
 
         protected virtual void FiniteGameStateMachine_OnFixedUpdate(float fixedDeltaTime)
@@ -58,7 +44,6 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             if (Started)
             {
                 CurrentState.FixedUpdate(fixedDeltaTime);
-                ChangeStatePrimitive(ChangeToState);
             }
         }
 
@@ -67,7 +52,6 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             if (Started)
             {
                 CurrentState.LateUpdate(deltaTime);
-                ChangeStatePrimitive(ChangeToState);
             }
         }
 
@@ -84,13 +68,7 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             if (Started)
             {
                 CurrentState.Update(deltaTime);
-                ChangeStatePrimitive(ChangeToState);
             }
-        }
-
-        protected override sealed void FiniteStateMachine_ChangeStateStrategy(TGameState state)
-        {
-            FiniteGameStateMachine_ChangeStateStrategy(state);
         }
 
         protected override sealed void FiniteStateMachine_OnChangeStateFailure(TGameState state)

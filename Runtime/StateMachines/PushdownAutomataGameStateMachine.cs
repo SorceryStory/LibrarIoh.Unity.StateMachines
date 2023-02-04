@@ -5,18 +5,11 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
     public class PushdownAutomataGameStateMachine<TGameState> : PushdownAutomataStateMachine<TGameState>, IGameStateMachine<TGameState>
         where TGameState : GameState<TGameState>
     {
-        #region Fields
-
-        protected TGameState ChangeToState;
-
-        #endregion Fields
-
         #region Constructors
 
         public PushdownAutomataGameStateMachine()
             : base()
         {
-            ChangeToState = null;
         }
 
         #endregion Constructors
@@ -38,19 +31,12 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             PushdownAutomataGameStateMachine_OnUpdate(deltaTime);
         }
 
-        protected virtual void PushdownAutomataGameStateMachine_ChangeStateStrategy(TGameState state)
-        {
-            ChangeToState = state;
-        }
-
         protected virtual void PushdownAutomataGameStateMachine_OnChangeStateFailure(TGameState state)
         {
-            ChangeToState = null;
         }
 
         protected virtual void PushdownAutomataGameStateMachine_OnChangeStateSuccess(TGameState state)
         {
-            ChangeToState = null;
         }
 
         protected virtual void PushdownAutomataGameStateMachine_OnFixedUpdate(float fixedDeltaTime)
@@ -58,7 +44,6 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             if (Started)
             {
                 CurrentState.FixedUpdate(fixedDeltaTime);
-                ChangeStatePrimitive(ChangeToState);
             }
         }
 
@@ -67,7 +52,6 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             if (Started)
             {
                 CurrentState.LateUpdate(deltaTime);
-                ChangeStatePrimitive(ChangeToState);
             }
         }
 
@@ -100,13 +84,7 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             if (Started)
             {
                 CurrentState.Update(deltaTime);
-                ChangeStatePrimitive(ChangeToState);
             }
-        }
-
-        protected override sealed void PushdownAutomataStateMachine_ChangeStateStrategy(TGameState state)
-        {
-            PushdownAutomataGameStateMachine_ChangeStateStrategy(state);
         }
 
         protected override sealed void PushdownAutomataStateMachine_OnChangeStateFailure(TGameState state)

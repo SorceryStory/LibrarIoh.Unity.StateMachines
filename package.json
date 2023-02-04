@@ -1,12 +1,12 @@
 {
   "name": "com.sorceressspell.librarioh.unity.statemachines",
   "displayName": "LibrarIoh.Unity.StateMachines",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "library",
   "unity": "2018.1",
   "description": "LibrarIoh.Unity.StateMachines (https://github.com/SorceryStory/LibrarIoh.Unity.StateMachines)\n\nState Machines for Unity.\n\nDepends on:\n  - LibrarIoh.StateMachines (https://github.com/SorceryStory/LibrarIoh.StateMachines)",
   "dependencies": {
-    "com.sorceressspell.librarioh.statemachines": "0.2.1"
+    "com.sorceressspell.librarioh.statemachines": "0.3.1"
   },
   "author": {
     "name": "Joana Almeida",
