@@ -102,7 +102,6 @@ namespace SorceressSpell.LibrarIoh.Unity.StateMachines
             PushdownAutomataGameStateMachine_OnStart();
         }
 
-
         protected override sealed void PushdownAutomataStateMachine_OnStatePop(TGameState poppedState)
         {
             PushdownAutomataGameStateMachine_OnStatePop(poppedState);
